@@ -1,14 +1,19 @@
 # Docker image for SPECFEM3D_Cartesian
 
+SPECFEM3D docker build.
+
+Forked from https://github.com/akrause2014/specfem3d, 
+
+
 ## Build
 
 Build the Docker container:
 
 ```
-docker build . -t specfem3d_mpi
+docker build -t specfem3d:latest .
 ```
 
-This creates a docker image with the tag "specfem3d_mpi:latest".
+This creates a docker image with the tag "specfem3d:latest".
 You can choose any tag name and also specify version.
 
 ## Run container
@@ -32,21 +37,21 @@ Hello world from processor 45af5c75526d, rank 0 out of 4 processors
 
 Logging out will kill the container (and remove any data or changes you've made).
 
-## Run container non-interactively (with SSHD)
-
-Run the container in non-interactive mode (this command does not return until
-you kill the container):
-```
-docker run <IMAGE_ID>
-```
-
-Check that the container is running and find out the container ID:
-
-```
-$ docker ps
-CONTAINER ID        IMAGE               COMMAND               CREATED             STATUS              PORTS               NAMES
-38e2ea53744d        e99ef04dc42f        "/usr/sbin/sshd -D"   31 minutes ago      Up 31 minutes       22/tcp              keen_ellis
-```
+// ## Run container non-interactively (with SSHD)
+// 
+// Run the container in non-interactive mode (this command does not return until
+// you kill the container):
+// ```
+// docker run <IMAGE_ID>
+// ```
+// 
+// Check that the container is running and find out the container ID:
+// 
+// ```
+// $ docker ps
+// CONTAINER ID        IMAGE               COMMAND               CREATED             STATUS              PORTS               NAMES
+// 38e2ea53744d        e99ef04dc42f        "/usr/sbin/sshd -D"   31 minutes ago      Up 31 minutes       22/tcp              keen_ellis
+// ```
 
 ## SPECFEM3D example
 
