@@ -10,7 +10,6 @@ echo
 
 rm -f -r OUTPUT_FILES
 
-mkdir -p bin
 mkdir -p OUTPUT_FILES
 mkdir -p OUTPUT_FILES/DATABASES_MPI
 
@@ -33,13 +32,13 @@ echo
 echo
 echo "  running database generation on $NPROC processors..."
 echo
-mpirun -np $NPROC /usr/local/bin/xgenerate_databases
+mpirun -np $NPROC  /usr/local/bin/xgenerate_databases
 
 # runs simulation
 echo
 echo "  running solver on $NPROC processors..."
 echo
-mpirun -np $NPROC /usr/local/bin/xspecfem3D
+mpirun -np $NPROC  /usr/local/bin/xspecfem3D
 
 echo
 echo "see results in directory: OUTPUT_FILES/"

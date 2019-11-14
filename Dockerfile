@@ -47,7 +47,8 @@ ADD mpi_hello_world.c ${HOME}/mpi_hello_world.c
 RUN chown -R ${USER}:${USER} ${HOME}/mpi_hello_world.c
 RUN cd ${HOME} && mpicc -o mpi_hello_world mpi_hello_world.c
 
-
+# User config
+USER mpiuser
 
 #RUN ssh-keygen -A \
 #    && sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
