@@ -65,7 +65,7 @@ $ /bin/sh ./run.sh
 
 This takes quite a while to run
 
-
+<!---
 // ## Compose multiple Docker containers as MPI cluster
 // 
 // Create a swarm and deploy the app (see https://docs.docker.com/get-started/part3/):
@@ -127,3 +127,4 @@ This takes quite a while to run
 // CONTAINER ID        IMAGE               COMMAND               CREATED             STATUS              PORTS               NAMES
 // 38e2ea53744d        e99ef04dc42f        "/usr/sbin/sshd -D"   31 minutes ago      Up 31 minutes       22/tcp              keen_ellis
 // ```
+-->
