@@ -28,17 +28,17 @@ echo "  decomposing mesh..."
 echo
 /usr/local/bin/xdecompose_mesh $NPROC ./MESH-default ./OUTPUT_FILES/DATABASES_MPI/
 
-# runs database generation
+# runs database generation - note the grep command filters out some annoying error messages for mpi on docker
 echo
 echo "  running database generation on $NPROC processors..."
 echo
-mpirun -np $NPROC  /usr/local/bin/xgenerate_databases
+mpirun -np $NPROC  /usr/local/bin/xgenerate_databases 2>&1 | grep -v 'Read -1,'
 
-# runs simulation
+# runs simulation - note the grep command filters out some annoying error messages for mpi on docker
 echo
 echo "  running solver on $NPROC processors..."
 echo
-mpirun -np $NPROC  /usr/local/bin/xspecfem3D
+mpirun -np $NPROC  /usr/local/bin/xspecfem3D 2>&1 | grep -v 'Read -1,'
 
 echo
 echo "see results in directory: OUTPUT_FILES/"
