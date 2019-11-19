@@ -63,7 +63,19 @@ $ cd example2/
 $ /bin/sh ./run.sh
 ```
 
-This takes quite a while to run
+This takes quite a while to run...
+
+### Example 3
+
+Is another homoegeous 1/2 space example corresponding to `EXAMPLES/homogeneous_halfspace_HEX8_elastic_absorbing_Stacey_5sides`
+in the SPECFEM distribution
+
+```
+$ docker run -v `pwd`/example/example3:/home/mpiuser/example3 -it specfem3d-docker:latest /bin/sh
+$ cd example3/
+$ /bin/sh ./run.sh
+```
+
 
 <!---
 
